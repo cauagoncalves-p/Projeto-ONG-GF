@@ -138,7 +138,7 @@ namespace Projeto_Socorrista
                 {
                     MessageBox.Show("Redefinição de senha concluído!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    frmLoginVoluntario login = new frmLoginVoluntario();
+                    frmLoginNovo login = new frmLoginNovo();
                     login.ShowDialog();
                     this.Show();
                 }

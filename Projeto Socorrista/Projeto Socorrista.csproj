@@ -125,11 +125,11 @@
     <Compile Include="frmEnviarSenha.Designer.cs">
       <DependentUpon>frmEnviarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoginVoluntario.cs">
+    <Compile Include="frmLoginNovo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoginVoluntario.Designer.cs">
-      <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
+    <Compile Include="frmLoginNovo.Designer.cs">
+      <DependentUpon>frmLoginNovo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -160,8 +160,8 @@
     <EmbeddedResource Include="frmEnviarSenha.resx">
       <DependentUpon>frmEnviarSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoginVoluntario.resx">
-      <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
+    <EmbeddedResource Include="frmLoginNovo.resx">
+      <DependentUpon>frmLoginNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
