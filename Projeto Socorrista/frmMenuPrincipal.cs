@@ -30,6 +30,7 @@ namespace Projeto_Socorrista
             arredondador.ArredondarPanel(panelGraficoTipoAlimento, 20);
             carregaGraficoAlimentos();
         }
+
         private string ObterNomeMes(int numeroMes)
         {
             DateTime data = new DateTime(2000, numeroMes, 1);

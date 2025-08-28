@@ -707,7 +707,6 @@ namespace Projeto_Socorrista
 
         private bool enviarCodigo(string destino, string codigo)
         {
-
             try
             {
                 MailMessage mail = new MailMessage();

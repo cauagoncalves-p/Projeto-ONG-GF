@@ -47,6 +47,8 @@ namespace Projeto_Socorrista
             this.MtxtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCriarConta = new System.Windows.Forms.Button();
+            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
+            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblDataNascimento = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@ namespace Projeto_Socorrista
             this.lblSubTituloCriarConta = new System.Windows.Forms.Label();
             this.lblTituloCriarConta = new System.Windows.Forms.Label();
             this.process1 = new System.Diagnostics.Process();
-            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
-            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCadastro.SuspendLayout();
@@ -181,10 +181,10 @@ namespace Projeto_Socorrista
             // 
             // MtxtConfirmeSenha
             // 
-            this.MtxtConfirmeSenha.Location = new System.Drawing.Point(367, 638);
+            this.MtxtConfirmeSenha.Location = new System.Drawing.Point(377, 638);
             this.MtxtConfirmeSenha.Multiline = true;
             this.MtxtConfirmeSenha.Name = "MtxtConfirmeSenha";
-            this.MtxtConfirmeSenha.Size = new System.Drawing.Size(247, 40);
+            this.MtxtConfirmeSenha.Size = new System.Drawing.Size(206, 40);
             this.MtxtConfirmeSenha.TabIndex = 189;
             // 
             // MtxtSenha
@@ -267,6 +267,24 @@ namespace Projeto_Socorrista
             this.btnCriarConta.TabIndex = 177;
             this.btnCriarConta.Text = "Criar conta";
             this.btnCriarConta.UseVisualStyleBackColor = false;
+            // 
+            // picMonstrarSenha
+            // 
+            this.picMonstrarSenha.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
+            this.picMonstrarSenha.Location = new System.Drawing.Point(281, 606);
+            this.picMonstrarSenha.Name = "picMonstrarSenha";
+            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 26);
+            this.picMonstrarSenha.TabIndex = 166;
+            this.picMonstrarSenha.TabStop = false;
+            // 
+            // picMostrarSenha1
+            // 
+            this.picMostrarSenha1.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
+            this.picMostrarSenha1.Location = new System.Drawing.Point(614, 596);
+            this.picMostrarSenha1.Name = "picMostrarSenha1";
+            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 26);
+            this.picMostrarSenha1.TabIndex = 165;
+            this.picMostrarSenha1.TabStop = false;
             // 
             // lblConfirmeSenha
             // 
@@ -422,24 +440,6 @@ namespace Projeto_Socorrista
             this.process1.StartInfo.StandardOutputEncoding = null;
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
-            // 
-            // picMonstrarSenha
-            // 
-            this.picMonstrarSenha.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
-            this.picMonstrarSenha.Location = new System.Drawing.Point(281, 606);
-            this.picMonstrarSenha.Name = "picMonstrarSenha";
-            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 26);
-            this.picMonstrarSenha.TabIndex = 166;
-            this.picMonstrarSenha.TabStop = false;
-            // 
-            // picMostrarSenha1
-            // 
-            this.picMostrarSenha1.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
-            this.picMostrarSenha1.Location = new System.Drawing.Point(614, 596);
-            this.picMostrarSenha1.Name = "picMostrarSenha1";
-            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 26);
-            this.picMostrarSenha1.TabIndex = 165;
-            this.picMostrarSenha1.TabStop = false;
             // 
             // pictureBox2
             // 
