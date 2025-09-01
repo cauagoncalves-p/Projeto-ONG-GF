@@ -55,13 +55,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAtualizarDados = new System.Windows.Forms.Button();
             this.dgvRegistro = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.dataArrecadacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataValidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadastradoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpbCamposAlimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -353,25 +353,6 @@
             this.dgvRegistro.Size = new System.Drawing.Size(924, 388);
             this.dgvRegistro.TabIndex = 14;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(170, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 4;
-            // 
-            // btnSair
-            // 
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(1286, 605);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(126, 43);
-            this.btnSair.TabIndex = 12;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            // 
             // dataArrecadacao
             // 
             this.dataArrecadacao.HeaderText = "0";
@@ -401,6 +382,26 @@
             this.cadastradoPor.HeaderText = "4";
             this.cadastradoPor.Name = "cadastradoPor";
             this.cadastradoPor.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(170, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.TabIndex = 4;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(1286, 605);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(126, 43);
+            this.btnSair.TabIndex = 12;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmCadastrarAlimentosV2
             // 

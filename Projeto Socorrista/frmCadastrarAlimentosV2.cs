@@ -216,6 +216,7 @@ namespace Projeto_Socorrista
 
         private void btnAtualizarDados_Click(object sender, EventArgs e)
         {
+            dgvRegistro.Rows.Clear();
             carregaDoacoes();
         }
 
@@ -230,6 +231,11 @@ namespace Projeto_Socorrista
             cbbUnidadeMedida.SelectedIndex = 0;
             txtPeso.Clear();
             MtxtObservacoes.Clear();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

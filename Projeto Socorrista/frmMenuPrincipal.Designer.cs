@@ -44,52 +44,52 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCadastroALimentos = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLinha = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelFamilias = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblFamilias = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panelDistribuicoes = new System.Windows.Forms.Panel();
-            this.panelEstoque = new System.Windows.Forms.Panel();
-            this.panelAlimentos = new System.Windows.Forms.Panel();
-            this.panelRecebimentos = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panelTipoAlimento = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblDistribuicao = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panelEstoque = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblEstoqueAtual = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblFamilias = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.panelAlimentos = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panelRecebimentos = new System.Windows.Forms.Panel();
             this.panelGraficoRecebimentos = new System.Windows.Forms.Panel();
-            this.panelGraficoTipoAlimento = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelTipoAlimento = new System.Windows.Forms.Panel();
+            this.panelGraficoTipoAlimento = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelAzul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelFamilias.SuspendLayout();
-            this.panelDistribuicoes.SuspendLayout();
-            this.panelEstoque.SuspendLayout();
-            this.panelAlimentos.SuspendLayout();
-            this.panelRecebimentos.SuspendLayout();
-            this.panelTipoAlimento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelDistribuicoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelEstoque.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelAlimentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelRecebimentos.SuspendLayout();
             this.panelGraficoRecebimentos.SuspendLayout();
-            this.panelGraficoTipoAlimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panelTipoAlimento.SuspendLayout();
+            this.panelGraficoTipoAlimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,33 +222,6 @@
             this.btnCadastroALimentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastroALimentos.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Receber alimentos";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(-15, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 43);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "         ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -320,6 +293,38 @@
             this.panelFamilias.Size = new System.Drawing.Size(345, 100);
             this.panelFamilias.TabIndex = 21;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(19, 7);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(77, 83);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 34;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lblFamilias
+            // 
+            this.lblFamilias.AutoSize = true;
+            this.lblFamilias.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilias.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFamilias.Location = new System.Drawing.Point(112, 21);
+            this.lblFamilias.Name = "lblFamilias";
+            this.lblFamilias.Size = new System.Drawing.Size(154, 21);
+            this.lblFamilias.TabIndex = 34;
+            this.lblFamilias.Text = "Familias Atendidas";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(111, 53);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 28);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "124";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -353,69 +358,15 @@
             this.panelDistribuicoes.Size = new System.Drawing.Size(345, 100);
             this.panelDistribuicoes.TabIndex = 22;
             // 
-            // panelEstoque
+            // pictureBox3
             // 
-            this.panelEstoque.BackColor = System.Drawing.Color.White;
-            this.panelEstoque.Controls.Add(this.pictureBox4);
-            this.panelEstoque.Controls.Add(this.lblEstoqueAtual);
-            this.panelEstoque.Controls.Add(this.label11);
-            this.panelEstoque.Location = new System.Drawing.Point(1118, 117);
-            this.panelEstoque.Name = "panelEstoque";
-            this.panelEstoque.Size = new System.Drawing.Size(345, 100);
-            this.panelEstoque.TabIndex = 22;
-            // 
-            // panelAlimentos
-            // 
-            this.panelAlimentos.BackColor = System.Drawing.Color.White;
-            this.panelAlimentos.Controls.Add(this.pictureBox2);
-            this.panelAlimentos.Controls.Add(this.label13);
-            this.panelAlimentos.Controls.Add(this.label12);
-            this.panelAlimentos.Location = new System.Drawing.Point(333, 117);
-            this.panelAlimentos.Name = "panelAlimentos";
-            this.panelAlimentos.Size = new System.Drawing.Size(345, 100);
-            this.panelAlimentos.TabIndex = 22;
-            // 
-            // panelRecebimentos
-            // 
-            this.panelRecebimentos.BackColor = System.Drawing.Color.White;
-            this.panelRecebimentos.Controls.Add(this.panelGraficoRecebimentos);
-            this.panelRecebimentos.Controls.Add(this.label7);
-            this.panelRecebimentos.Location = new System.Drawing.Point(333, 301);
-            this.panelRecebimentos.Name = "panelRecebimentos";
-            this.panelRecebimentos.Size = new System.Drawing.Size(897, 370);
-            this.panelRecebimentos.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(21, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 21);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Recebimentos mensais";
-            // 
-            // panelTipoAlimento
-            // 
-            this.panelTipoAlimento.BackColor = System.Drawing.Color.White;
-            this.panelTipoAlimento.Controls.Add(this.panelGraficoTipoAlimento);
-            this.panelTipoAlimento.Controls.Add(this.label8);
-            this.panelTipoAlimento.Location = new System.Drawing.Point(1276, 301);
-            this.panelTipoAlimento.Name = "panelTipoAlimento";
-            this.panelTipoAlimento.Size = new System.Drawing.Size(569, 370);
-            this.panelTipoAlimento.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(21, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 21);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Tipos de alimentos ";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(22, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(77, 83);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
             // 
             // lblDistribuicao
             // 
@@ -439,6 +390,27 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "980 KG";
             // 
+            // panelEstoque
+            // 
+            this.panelEstoque.BackColor = System.Drawing.Color.White;
+            this.panelEstoque.Controls.Add(this.pictureBox4);
+            this.panelEstoque.Controls.Add(this.lblEstoqueAtual);
+            this.panelEstoque.Controls.Add(this.label11);
+            this.panelEstoque.Location = new System.Drawing.Point(1118, 117);
+            this.panelEstoque.Name = "panelEstoque";
+            this.panelEstoque.Size = new System.Drawing.Size(345, 100);
+            this.panelEstoque.TabIndex = 22;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(18, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(77, 83);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
             // lblEstoqueAtual
             // 
             this.lblEstoqueAtual.AutoSize = true;
@@ -461,27 +433,16 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "256 KG";
             // 
-            // lblFamilias
+            // panelAlimentos
             // 
-            this.lblFamilias.AutoSize = true;
-            this.lblFamilias.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamilias.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFamilias.Location = new System.Drawing.Point(112, 21);
-            this.lblFamilias.Name = "lblFamilias";
-            this.lblFamilias.Size = new System.Drawing.Size(154, 21);
-            this.lblFamilias.TabIndex = 34;
-            this.lblFamilias.Text = "Familias Atendidas";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(111, 53);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 28);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "124";
+            this.panelAlimentos.BackColor = System.Drawing.Color.White;
+            this.panelAlimentos.Controls.Add(this.pictureBox2);
+            this.panelAlimentos.Controls.Add(this.label13);
+            this.panelAlimentos.Controls.Add(this.label12);
+            this.panelAlimentos.Location = new System.Drawing.Point(333, 117);
+            this.panelAlimentos.Name = "panelAlimentos";
+            this.panelAlimentos.Size = new System.Drawing.Size(345, 100);
+            this.panelAlimentos.TabIndex = 22;
             // 
             // pictureBox2
             // 
@@ -493,35 +454,15 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // panelRecebimentos
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(22, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 83);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(18, 7);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(77, 83);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 7);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(77, 83);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 34;
-            this.pictureBox5.TabStop = false;
+            this.panelRecebimentos.BackColor = System.Drawing.Color.White;
+            this.panelRecebimentos.Controls.Add(this.panelGraficoRecebimentos);
+            this.panelRecebimentos.Controls.Add(this.label7);
+            this.panelRecebimentos.Location = new System.Drawing.Point(333, 301);
+            this.panelRecebimentos.Name = "panelRecebimentos";
+            this.panelRecebimentos.Size = new System.Drawing.Size(897, 370);
+            this.panelRecebimentos.TabIndex = 30;
             // 
             // panelGraficoRecebimentos
             // 
@@ -531,15 +472,6 @@
             this.panelGraficoRecebimentos.Name = "panelGraficoRecebimentos";
             this.panelGraficoRecebimentos.Size = new System.Drawing.Size(843, 289);
             this.panelGraficoRecebimentos.TabIndex = 31;
-            // 
-            // panelGraficoTipoAlimento
-            // 
-            this.panelGraficoTipoAlimento.BackColor = System.Drawing.SystemColors.Menu;
-            this.panelGraficoTipoAlimento.Controls.Add(this.chart2);
-            this.panelGraficoTipoAlimento.Location = new System.Drawing.Point(25, 55);
-            this.panelGraficoTipoAlimento.Name = "panelGraficoTipoAlimento";
-            this.panelGraficoTipoAlimento.Size = new System.Drawing.Size(516, 289);
-            this.panelGraficoTipoAlimento.TabIndex = 32;
             // 
             // chart1
             // 
@@ -557,6 +489,36 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(21, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(184, 21);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Recebimentos mensais";
+            // 
+            // panelTipoAlimento
+            // 
+            this.panelTipoAlimento.BackColor = System.Drawing.Color.White;
+            this.panelTipoAlimento.Controls.Add(this.panelGraficoTipoAlimento);
+            this.panelTipoAlimento.Controls.Add(this.label8);
+            this.panelTipoAlimento.Location = new System.Drawing.Point(1276, 301);
+            this.panelTipoAlimento.Name = "panelTipoAlimento";
+            this.panelTipoAlimento.Size = new System.Drawing.Size(569, 370);
+            this.panelTipoAlimento.TabIndex = 31;
+            // 
+            // panelGraficoTipoAlimento
+            // 
+            this.panelGraficoTipoAlimento.BackColor = System.Drawing.SystemColors.Menu;
+            this.panelGraficoTipoAlimento.Controls.Add(this.chart2);
+            this.panelGraficoTipoAlimento.Location = new System.Drawing.Point(25, 55);
+            this.panelGraficoTipoAlimento.Name = "panelGraficoTipoAlimento";
+            this.panelGraficoTipoAlimento.Size = new System.Drawing.Size(516, 289);
+            this.panelGraficoTipoAlimento.TabIndex = 32;
+            // 
             // chart2
             // 
             chartArea2.Name = "ChartArea1";
@@ -572,6 +534,44 @@
             this.chart2.Size = new System.Drawing.Size(488, 266);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(21, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 21);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Tipos de alimentos ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(87, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Receber alimentos";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(-15, 285);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 43);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "         ";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmMenuPrincipal
             // 
@@ -595,23 +595,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFamilias.ResumeLayout(false);
             this.panelFamilias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelDistribuicoes.ResumeLayout(false);
             this.panelDistribuicoes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelEstoque.ResumeLayout(false);
             this.panelEstoque.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelAlimentos.ResumeLayout(false);
             this.panelAlimentos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelRecebimentos.ResumeLayout(false);
             this.panelRecebimentos.PerformLayout();
+            this.panelGraficoRecebimentos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panelTipoAlimento.ResumeLayout(false);
             this.panelTipoAlimento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panelGraficoRecebimentos.ResumeLayout(false);
             this.panelGraficoTipoAlimento.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -630,8 +630,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCadastroALimentos;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblLinha;
@@ -660,5 +658,7 @@
         private System.Windows.Forms.Panel panelGraficoTipoAlimento;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
