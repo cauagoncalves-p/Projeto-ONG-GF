@@ -66,7 +66,7 @@ namespace Projeto_Socorrista
         private int enviarDoacoes(string data,string tipoDoacao, int quantidade, string unidade, string descricao, string informacao) {
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "insert into tbDoacoes (data_recebimento, tipo_doacao, quantidade, unidade_medida, descricao, observacao) values " +
-                "(@data_recebimento, @tipo_doacao, @quantidade, @unidade_medida, @descricao, @observacao);";
+                "(@ data_recebimento, @tipo_doacao, @quantidade, @unidade_medida, @descricao, @observacao);";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();

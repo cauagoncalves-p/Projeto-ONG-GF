@@ -16,7 +16,11 @@ namespace Projeto_Socorrista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmReceberAlimentos());
+=======
+            Application.Run(new frmCadastrarAlimentosV2());
+>>>>>>> master
         }
     }
 }
