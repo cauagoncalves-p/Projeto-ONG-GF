@@ -57,24 +57,24 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblCodOrNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvProdutosRecentes = new System.Windows.Forms.DataGridView();
+            this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataArrecadacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTituloEstoque = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLerQRCode = new System.Windows.Forms.Button();
             this.btnDarBaixa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosRecentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -334,7 +334,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblCodOrNome);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.dgvProdutosRecentes);
+            this.panel2.Controls.Add(this.dgvEstoque);
             this.panel2.Controls.Add(this.lblSubTitulo);
             this.panel2.Controls.Add(this.lblTituloEstoque);
             this.panel2.Controls.Add(this.panel3);
@@ -425,11 +425,11 @@
             this.label1.Text = "_________________________________________________________________________________" +
     "________________";
             // 
-            // dgvProdutosRecentes
+            // dgvEstoque
             // 
-            this.dgvProdutosRecentes.AllowUserToAddRows = false;
-            this.dgvProdutosRecentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutosRecentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEstoque.AllowUserToAddRows = false;
+            this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.produto,
             this.quantidade,
@@ -437,11 +437,12 @@
             this.dataArrecadacao,
             this.validade,
             this.status});
-            this.dgvProdutosRecentes.Location = new System.Drawing.Point(33, 327);
-            this.dgvProdutosRecentes.Name = "dgvProdutosRecentes";
-            this.dgvProdutosRecentes.ReadOnly = true;
-            this.dgvProdutosRecentes.Size = new System.Drawing.Size(1099, 357);
-            this.dgvProdutosRecentes.TabIndex = 5;
+            this.dgvEstoque.Location = new System.Drawing.Point(36, 327);
+            this.dgvEstoque.Name = "dgvEstoque";
+            this.dgvEstoque.ReadOnly = true;
+            this.dgvEstoque.Size = new System.Drawing.Size(1099, 357);
+            this.dgvEstoque.TabIndex = 5;
+            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             // 
             // codigo
             // 
@@ -478,6 +479,12 @@
             this.validade.HeaderText = "Validade";
             this.validade.Name = "validade";
             this.validade.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // lblSubTitulo
             // 
@@ -550,12 +557,6 @@
             this.textBox1.Size = new System.Drawing.Size(755, 26);
             this.textBox1.TabIndex = 11;
             // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,7 +582,7 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosRecentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -603,7 +604,7 @@
         private System.Windows.Forms.Button btnReceberAlimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvProdutosRecentes;
+        private System.Windows.Forms.DataGridView dgvEstoque;
         private System.Windows.Forms.Label lblSubTitulo;
         private System.Windows.Forms.Label lblTituloEstoque;
         private System.Windows.Forms.Panel panel3;

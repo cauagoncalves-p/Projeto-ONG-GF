@@ -24,47 +24,42 @@ namespace Projeto_Socorrista
         private void configDataGridView()
         {
             // Ajustar para ocupar toda a largura
-            dgvProdutosRecentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Alternar cores das linhas
-            dgvProdutosRecentes.RowsDefaultCellStyle.BackColor = Color.LightGray;
+            dgvEstoque.RowsDefaultCellStyle.BackColor = Color.LightGray;
        
 
             // Aumentar fonte
-            dgvProdutosRecentes.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
-            dgvProdutosRecentes.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvEstoque.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
+            dgvEstoque.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
 
             // Ajustar altura das linhas
-            dgvProdutosRecentes.RowTemplate.Height = 40;
+            dgvEstoque.RowTemplate.Height = 40;
 
             // Habilitar quebra de texto
-            dgvProdutosRecentes.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             // Adicionar botões na coluna Ações
             DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+            btnEditar.Name = "Editar";
             btnEditar.HeaderText = "Editar";
             btnEditar.Text = "Editar";
             btnEditar.UseColumnTextForButtonValue = true;
-            DataGridViewButtonColumn btnBaixa = new DataGridViewButtonColumn();
-            btnBaixa.HeaderText = "Baixa";
-            btnBaixa.Text = "Baixa";
-            btnBaixa.UseColumnTextForButtonValue = true;
-            dgvProdutosRecentes.Columns.Add(btnEditar);
-            dgvProdutosRecentes.Columns.Add(btnBaixa);
+            dgvEstoque.Columns.Add(btnEditar);
 
             // Ajustar a coluna Quantidade para edição
-            dgvProdutosRecentes.Columns[3].ReadOnly = false;
+            dgvEstoque.Columns[3].ReadOnly = false;
 
             // Ajustar seleção de célula
-            dgvProdutosRecentes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProdutosRecentes.MultiSelect = false;
-
+            dgvEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEstoque.MultiSelect = false;
         }
 
 
         private void carregaDados(string busca = "", DateTime? validade = null, string unidade = "", string status = "")
         {
-            dgvProdutosRecentes.Rows.Clear();
+            dgvEstoque.Rows.Clear();
 
             MySqlCommand comm = new MySqlCommand();
             comm.Connection = ConectaBanco.ObterConexao();
@@ -72,7 +67,7 @@ namespace Projeto_Socorrista
 
             comm.CommandText = @"SELECT * FROM tbProdutos
                      WHERE (@busca = '' OR codProd = @busca OR nome LIKE @buscaPattern)
-                       AND (@validade IS NULL OR DATE(dataDEValidade) = @validade)
+                   
                        AND (@unidade = '' OR unidade = @unidade)
                        AND (@status = '' OR status_validade = @status)
                      ORDER BY codProd;";
@@ -91,7 +86,7 @@ namespace Projeto_Socorrista
                 string dataArrecadacao = DR["dataArrecadacao"] == DBNull.Value ? "" : Convert.ToDateTime(DR["dataArrecadacao"]).ToString("dd/MM/yyyy");
                 string dataValidade = DR["dataDEValidade"] == DBNull.Value ? "" : Convert.ToDateTime(DR["dataDEValidade"]).ToString("dd/MM/yyyy");
 
-                dgvProdutosRecentes.Rows.Add(
+                dgvEstoque.Rows.Add(
                     DR["codProd"].ToString(),
                     DR["nome"].ToString(),
                     DR["quantidade"].ToString(),
@@ -119,19 +114,24 @@ namespace Projeto_Socorrista
             btnEntradaEstoque.BringToFront();
             btnNovoProduto.BringToFront();
             btnRelatorio.BringToFront();
-            dgvProdutosRecentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             configDataGridView();
             carregaDados();
             cbxStatus.SelectedIndex = 0;
             cbxCategoria.SelectedIndex = 0;
+        
         }
+        string unidades;
+        string unidadeEscolhida;
+        string status_validade;
+        DateTime? validadeFiltro = null;
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            string unidade = cbxCategoria.Text;
-            string unidadeEscolhida = "";
+            unidades = cbxCategoria.Text;
+            status_validade = cbxStatus.Text;
 
-            switch (unidade) {
+            switch (unidades) {
                 case "Quilogramas (kg)":
                     unidadeEscolhida = "kg";
                     break;
@@ -146,7 +146,7 @@ namespace Projeto_Socorrista
                     unidadeEscolhida = "ml";
                     break;
                 case "Unidades":
-                    unidadeEscolhida = "un";
+                    unidadeEscolhida = "unidades";
                     break;
                 case "Caixas":
                     unidadeEscolhida = "Caixas";
@@ -155,21 +155,30 @@ namespace Projeto_Socorrista
                     unidadeEscolhida = "";  
                     break;
             }
-
-            //  Data de validade
-            DateTime? validadeFiltro = null;
-            if (dtpDataValidade.Checked) // só filtra se estiver marcado
+            if (dtpDataValidade.Checked) 
             {
-                validadeFiltro = dtpDataValidade.Value.Date; // pega só a data sem hora
+                validadeFiltro = dtpDataValidade.Value.Date; 
             }
-
-            //  Chama a função apenas com unidade e validade
-            carregaDados("", validadeFiltro, unidadeEscolhida);
+            carregaDados(txtNomeOrCod.Text, validadeFiltro, unidadeEscolhida, status_validade);
         }
 
         private void txtNomeOrCod_TextChanged(object sender, EventArgs e)
         {
-            carregaDados(txtNomeOrCod.Text);
+            carregaDados(txtNomeOrCod.Text, validadeFiltro, unidadeEscolhida, status_validade);
+        }
+
+        private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // ignore header row
+            {
+                if (e.ColumnIndex == dgvEstoque.Columns["Editar"].Index)
+                {
+                    // Obter o código do produto da linha selecionada
+                    string codProd = dgvEstoque.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
+                    frmEditarEstoque f = new frmEditarEstoque(codProd);
+                    f.Show();
+                }
+            }
         }
     }
 }
