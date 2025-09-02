@@ -107,6 +107,12 @@
   <ItemGroup>
     <Compile Include="Classes\ConectaBanco.cs" />
     <Compile Include="Classes\PanelArredonda.cs" />
+    <Compile Include="frmCadastrarAlimentosV3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarAlimentosV3.Designer.cs">
+      <DependentUpon>frmCadastrarAlimentosV3.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastrarAlimentosV2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastrarAlimentosV3.resx">
+      <DependentUpon>frmCadastrarAlimentosV3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastrarAlimentosV2.resx">
       <DependentUpon>frmCadastrarAlimentosV2.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,22 +1,26 @@
 ﻿using MySql.Data.MySqlClient;
 using Projeto_Socorrista.Classes;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Projeto_Socorrista
 {
-    public partial class frmCadastrarAlimentosV2 : Form
+    public partial class frmControleDeAlimentosV3 : Form
     {
-        public frmCadastrarAlimentosV2()
+        public frmControleDeAlimentosV3()
         {
             InitializeComponent();
         }
 
-        private void frmCadastrarAlimentosV2_Load(object sender, EventArgs e)
+        private void frmControleDeAlimentosV3_Load(object sender, EventArgs e)
         {
             //lblTitulo.BringToFront();
 
@@ -29,6 +33,8 @@ namespace Projeto_Socorrista
             cbbUnidadeMedida.SelectedIndex = 0;
         }
 
+
+        //                                                              CONFIUGURAÇÕES DA PÁGINA DE CADASTRO DE DOAÇÕES
         private void configDataGridView()
         {
             // Estilo geral
@@ -68,25 +74,6 @@ namespace Projeto_Socorrista
             dgvRegistro.Columns[3].HeaderText = "Validade";
             dgvRegistro.Columns[4].HeaderText = "Cadastrado por";
         }
-
-        //public void carregaProdutosNaLista()
-        //{
-        //    MySqlCommand comm = new MySqlCommand();
-        //    comm.CommandText = "SELECT DISTINCT nome FROM tbprodutos ORDER BY nome ASC;";
-        //    comm.CommandType = CommandType.Text;
-
-        //    comm.Connection = ConectaBanco.ObterConexao();
-
-        //    MySqlDataReader DR;
-
-        //    DR = comm.ExecuteReader();
-
-        //    while (DR.Read())
-        //    {
-        //        cbbTipoDoacao.Items.Add(DR.GetString(0));
-        //    }
-        //    ConectaBanco.FecharConexao();
-        //}
 
         private void carregaDoacoes()
         {
@@ -146,6 +133,18 @@ namespace Projeto_Socorrista
             limparCamposDeCadastro();
 
             return resp;
+        }
+
+        public void limparCamposDeCadastro()
+        {
+            txtNomeDoItem.Clear();
+            txtQuantidade.Clear();
+            dtpDataValidade.Value = DateTime.Today;
+            DateTime dataRecebimento = Convert.ToDateTime(dtpDataEntrada.Text);
+            dtpDataValidade.Value = DateTime.Today;
+            cbbUnidadeMedida.SelectedIndex = 0;
+            txtPeso.Clear();
+            MtxtObservacoes.Clear();
         }
 
         private bool VerificaFormatacaoDosCampos()
@@ -241,19 +240,7 @@ namespace Projeto_Socorrista
             //carregaProdutosNaLista();
         }
 
-        public void limparCamposDeCadastro()
-        {
-            txtNomeDoItem.Clear();
-            txtQuantidade.Clear();
-            dtpDataValidade.Value = DateTime.Now;
-            DateTime dataRecebimento = Convert.ToDateTime(dtpDataEntrada.Text);
-            dtpDataValidade.Value = DateTime.Now;
-            cbbUnidadeMedida.SelectedIndex = 0;
-            txtPeso.Clear();
-            MtxtObservacoes.Clear();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
+        private void gpbCamposAlimento_Enter(object sender, EventArgs e)
         {
 
         }
