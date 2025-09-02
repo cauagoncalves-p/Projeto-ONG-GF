@@ -62,15 +62,14 @@ namespace Projeto_Socorrista
             dgvEstoque.Rows.Clear();
 
             MySqlCommand comm = new MySqlCommand();
-            comm.Connection = ConectaBanco.ObterConexao();
-            comm.CommandType = CommandType.Text;
-
             comm.CommandText = @"SELECT * FROM tbProdutos
-                     WHERE (@busca = '' OR codProd = @busca OR nome LIKE @buscaPattern)
-                   
-                       AND (@unidade = '' OR unidade = @unidade)
-                       AND (@status = '' OR status_validade = @status)
-                     ORDER BY codProd;";
+                        WHERE (@busca = '' OR codProd = @busca OR nome LIKE @buscaPattern)
+                        AND (@unidade = '' OR unidade = @unidade)
+                        AND (@status = '' OR status_validade = @status)
+                        AND (@validade IS NULL OR dataDEValidade = @validade)
+                        ORDER BY codProd;";
+
+            comm.CommandType = CommandType.Text;
 
             // Parameters 
             comm.Parameters.Clear();
@@ -79,6 +78,8 @@ namespace Projeto_Socorrista
             comm.Parameters.Add("@validade", MySqlDbType.Date).Value = validade.HasValue ? validade.Value.Date : (object)DBNull.Value;
             comm.Parameters.Add("@unidade", MySqlDbType.VarChar, 50).Value = unidade == "Selecione..." ? "" : unidade;
             comm.Parameters.Add("@status", MySqlDbType.VarChar, 50).Value = status == "Selecione..." ? "" : status;
+
+            comm.Connection = ConectaBanco.ObterConexao(); 
 
             MySqlDataReader DR = comm.ExecuteReader();
             while (DR.Read())
@@ -101,7 +102,16 @@ namespace Projeto_Socorrista
             ConectaBanco.FecharConexao();
         }
 
-
+        private void AtualizarStatusValidade(){
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = @"UPDATE tbProdutos SET status_validade = CASE
+                            WHEN dataDeValidade < CURDATE() THEN 'Vencido'
+                            ELSE 'Válido' END; ";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = ConectaBanco.ObterConexao();
+            comm.ExecuteNonQuery();
+            ConectaBanco.FecharConexao();
+        }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -117,6 +127,7 @@ namespace Projeto_Socorrista
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             configDataGridView();
             carregaDados();
+            AtualizarStatusValidade();
             cbxStatus.SelectedIndex = 0;
             cbxCategoria.SelectedIndex = 0;
         
@@ -124,7 +135,7 @@ namespace Projeto_Socorrista
         string unidades;
         string unidadeEscolhida;
         string status_validade;
-        DateTime? validadeFiltro = null;
+        DateTime? dataValidade = null;
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
@@ -155,16 +166,22 @@ namespace Projeto_Socorrista
                     unidadeEscolhida = "";  
                     break;
             }
-            if (dtpDataValidade.Checked) 
+
+            if (dtpDataValidade.Value.Date != DateTime.Today)
             {
-                validadeFiltro = dtpDataValidade.Value.Date; 
+                dataValidade = dtpDataValidade.Value.Date;
             }
-            carregaDados(txtNomeOrCod.Text, validadeFiltro, unidadeEscolhida, status_validade);
+
+            carregaDados(txtNomeOrCod.Text, dataValidade, unidadeEscolhida, status_validade);
         }
 
         private void txtNomeOrCod_TextChanged(object sender, EventArgs e)
         {
-            carregaDados(txtNomeOrCod.Text, validadeFiltro, unidadeEscolhida, status_validade);
+            string busca = txtNomeOrCod.Text;
+            DateTime? validade = null;
+            string unidade = "";
+            string status = "";
+            carregaDados(busca, validade, unidade, status); 
         }
 
         private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -176,7 +193,15 @@ namespace Projeto_Socorrista
                     // Obter o código do produto da linha selecionada
                     string codProd = dgvEstoque.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
                     frmEditarEstoque f = new frmEditarEstoque(codProd);
+                    f.DadosAtualizados += () =>
+                    {
+                        AtualizarStatusValidade();
+                        carregaDados();
+                    };
+
                     f.Show();
+
+                
                 }
             }
         }
