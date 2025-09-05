@@ -139,20 +139,6 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPesquisar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        kQAAAJEBVAVoGQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHPSURBVDhPjZLf
-        S1NhGMc/O5abTl07zp1qM6KEbUl4FDW8WBYIEt1EEGgNkwjCJFyxhNA/oIvor+jC3SijH5Kz1jRhhhde
-        dBn0P3jZzeSLRzk7R7GL5+b9vt/P87zf56Ver3NYwHQi0rb0cDC9NnUjU75sdhSBGSDgvtfgcYyxi5G2
-        4sbcg835saGNge541U52VfO3B6q1VxM/r8bOlYBLXvMRQOa12fvbZjhUBl4D74ACcCcSCq5+fHZvJ2VF
-        PwNnfACNrc6OeRZYBCzAAEaAhY5Q8MuvwuSW4D6A3qyxgXGv6OoyPD3c+8NOxEo+TYHpzUDYK7oAgWvn
-        O789z/ZtAmcbNKWtwICQ1+iulGWu52/1V7znaFVKG7jpFY8uwfVHg+mKnYiXj9GY0aqUNvBUwTlCEzAh
-        vT3YXNouTNYMg/xxgID2rFUpbWDMMX7QBtqDzSvFJ3d3ei90/gaiPoBD6U5b0U9aldJWYBnLXNfY6ixz
-        2jL/tl5J/QFyPoBr5Jd2smv5xaj9fW60v2on418Ng3n9C5mzu3v/et68rwBTPkAD9eATNXnOcjJnd/fq
-        DuTxiYCTSp09kJzv0mmlzoeQ1p5MzXfhf0qdZTZawm/3AeJu+JAsDrPHAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnLerQRCode.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA

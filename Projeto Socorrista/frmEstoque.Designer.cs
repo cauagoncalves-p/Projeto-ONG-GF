@@ -53,7 +53,6 @@
             this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtNomeOrCod = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblCodOrNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.btnLerQRCode = new System.Windows.Forms.Button();
             this.btnDarBaixa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.panel1.Controls.Add(this.btnLimparFiltros);
             this.panel1.Controls.Add(this.dtpDataValidade);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnAplicarFiltros);
@@ -128,7 +129,7 @@
             this.btnAplicarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAplicarFiltros.Location = new System.Drawing.Point(18, 594);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
-            this.btnAplicarFiltros.Size = new System.Drawing.Size(208, 28);
+            this.btnAplicarFiltros.Size = new System.Drawing.Size(95, 28);
             this.btnAplicarFiltros.TabIndex = 11;
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
@@ -356,7 +357,6 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel4.Controls.Add(this.txtNomeOrCod);
-            this.panel4.Controls.Add(this.btnPesquisar);
             this.panel4.Controls.Add(this.btnLimpar);
             this.panel4.Location = new System.Drawing.Point(33, 141);
             this.panel4.Name = "panel4";
@@ -369,26 +369,9 @@
             this.txtNomeOrCod.Location = new System.Drawing.Point(17, 17);
             this.txtNomeOrCod.Multiline = true;
             this.txtNomeOrCod.Name = "txtNomeOrCod";
-            this.txtNomeOrCod.Size = new System.Drawing.Size(755, 26);
+            this.txtNomeOrCod.Size = new System.Drawing.Size(893, 26);
             this.txtNomeOrCod.TabIndex = 13;
             this.txtNomeOrCod.TextChanged += new System.EventHandler(this.txtNomeOrCod_TextChanged);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(824, 17);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 26);
-            this.btnPesquisar.TabIndex = 12;
-            this.btnPesquisar.Text = "   Pesquisar";
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnLimpar
             // 
@@ -557,6 +540,21 @@
             this.textBox1.Size = new System.Drawing.Size(755, 26);
             this.textBox1.TabIndex = 11;
             // 
+            // btnLimparFiltros
+            // 
+            this.btnLimparFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimparFiltros.FlatAppearance.BorderSize = 0;
+            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 594);
+            this.btnLimparFiltros.Name = "btnLimparFiltros";
+            this.btnLimparFiltros.Size = new System.Drawing.Size(95, 28);
+            this.btnLimparFiltros.TabIndex = 15;
+            this.btnLimparFiltros.Text = "Limpar Filtros";
+            this.btnLimparFiltros.UseVisualStyleBackColor = false;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,7 +620,6 @@
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtNomeOrCod;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Label lblQRCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
@@ -633,5 +630,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn validade;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Button btnLimparFiltros;
     }
 }

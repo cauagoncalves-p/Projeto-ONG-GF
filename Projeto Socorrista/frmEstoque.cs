@@ -113,10 +113,6 @@ namespace Projeto_Socorrista
             ConectaBanco.FecharConexao();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            carregaDados(txtNomeOrCod.Text);
-        }
 
         private void frmEstoque_Load(object sender, EventArgs e)
         {
@@ -128,9 +124,10 @@ namespace Projeto_Socorrista
             configDataGridView();
             carregaDados();
             AtualizarStatusValidade();
-            cbxStatus.SelectedIndex = 0;
             cbxCategoria.SelectedIndex = 0;
-        
+            cbxStatus.SelectedIndex = 0;
+            dtpDataValidade.Value = DateTime.Today;
+
         }
         string unidades;
         string unidadeEscolhida;
@@ -139,6 +136,12 @@ namespace Projeto_Socorrista
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
+            if (cbxCategoria.SelectedIndex == 0 && cbxStatus.SelectedIndex == 0 && dtpDataValidade.Value == DateTime.Today)
+            {
+                MessageBox.Show("Não há filtros para busca", "ATENÇÂO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             unidades = cbxCategoria.Text;
             status_validade = cbxStatus.Text;
 
@@ -179,9 +182,44 @@ namespace Projeto_Socorrista
         {
             string busca = txtNomeOrCod.Text;
             DateTime? validade = null;
-            string unidade = "";
-            string status = "";
-            carregaDados(busca, validade, unidade, status); 
+
+            if (dtpDataValidade.Checked)
+            {
+                validade = dtpDataValidade.Value.Date;
+            }
+
+            unidades = cbxCategoria.Text;
+            status_validade = cbxStatus.Text;
+
+            switch (unidades)
+            {
+                case "Quilogramas (kg)":
+                    unidadeEscolhida = "kg";
+                    break;
+                case "Gramas (g)":
+                    unidadeEscolhida = "g";
+                    break;
+                case "Litros (l)":
+                    unidadeEscolhida = "litros";
+                    break;
+
+                case "Mililitros (ml)":
+                    unidadeEscolhida = "ml";
+                    break;
+                case "Unidades":
+                    unidadeEscolhida = "unidades";
+                    break;
+                case "Caixas":
+                    unidadeEscolhida = "Caixas";
+                    break;
+                default:
+                    unidadeEscolhida = "";
+                    break;
+            }
+
+        
+            carregaDados(busca, validade, unidadeEscolhida, status_validade);
+        
         }
 
         private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,10 +238,20 @@ namespace Projeto_Socorrista
                     };
 
                     f.Show();
-
-                
                 }
             }
+        }
+
+        private void btnLimparFiltros_Click(object sender, EventArgs e)
+        {
+            if (cbxCategoria.SelectedIndex == 0 && cbxStatus.SelectedIndex == 0 && dtpDataValidade.Value == DateTime.Today) {
+                MessageBox.Show("Não há filtros para limpar", "ATENÇÂO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            carregaDados();
+            cbxCategoria.SelectedIndex = 0;
+            cbxStatus.SelectedIndex = 0;
+            dtpDataValidade.Value = DateTime.Today;
         }
     }
 }
