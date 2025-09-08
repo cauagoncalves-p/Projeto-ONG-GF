@@ -101,11 +101,17 @@ namespace Projeto_Socorrista
 
             if (atualizarEstoque(txtProduto.Text, Convert.ToInt32(nudQuantidade.Value), unidadeEscolhida, dtpValidade.Value, codProduto) == 1)
             {
+                if (cbxCategoria.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Por favor Selecione uma categoria valida!", "ATENÇÂO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DadosAtualizados?.Invoke();
             }
             else {
-                MessageBox.Show("Error ao atualizar sucesso!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error ao atualizar sucesso!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
