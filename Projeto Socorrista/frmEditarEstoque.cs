@@ -72,7 +72,7 @@ namespace Projeto_Socorrista
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             string unidades = cbxCategoria.Text;
-            string unidadeEscolhida;
+            string unidadeEscolhida = cbxCategoria.Text;
             switch (unidades)
             {
                 case "Quilogramas (kg)":
@@ -93,9 +93,6 @@ namespace Projeto_Socorrista
                     break;
                 case "Caixas":
                     unidadeEscolhida = "Caixas";
-                    break;
-                default:
-                    unidadeEscolhida = "";
                     break;
             }
 

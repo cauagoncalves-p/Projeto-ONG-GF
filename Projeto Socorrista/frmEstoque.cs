@@ -118,10 +118,6 @@ namespace Projeto_Socorrista
 
         private void frmEstoque_Load(object sender, EventArgs e)
         { 
-            btnSaidaEstoque.BringToFront();
-            btnEntradaEstoque.BringToFront();
-            btnNovoProduto.BringToFront();
-            btnRelatorio.BringToFront();
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             configDataGridView();
             AtualizarStatusValidade(); 

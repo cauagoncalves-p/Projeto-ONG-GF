@@ -85,7 +85,7 @@
             "Mililitros (ml)",
             "Unidades",
             "Caixas"});
-            this.cbxCategoria.Location = new System.Drawing.Point(148, 97);
+            this.cbxCategoria.Location = new System.Drawing.Point(148, 98);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(252, 24);
             this.cbxCategoria.TabIndex = 7;

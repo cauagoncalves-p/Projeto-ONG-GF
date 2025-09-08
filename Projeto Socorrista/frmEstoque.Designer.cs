@@ -38,18 +38,8 @@
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.lblFiltros = new System.Windows.Forms.Label();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.btnDistribuicao = new System.Windows.Forms.Button();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.btnDashBoard = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnControleDeEstoque = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnReceberAlimento = new System.Windows.Forms.Button();
-            this.lblNavegacao = new System.Windows.Forms.Label();
-            this.btnNovoProduto = new System.Windows.Forms.Button();
-            this.btnEntradaEstoque = new System.Windows.Forms.Button();
-            this.btnSaidaEstoque = new System.Windows.Forms.Button();
-            this.btnRelatorio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -89,17 +79,11 @@
             this.panel1.Controls.Add(this.cbxStatus);
             this.panel1.Controls.Add(this.lblFiltros);
             this.panel1.Controls.Add(this.cbxCategoria);
-            this.panel1.Controls.Add(this.btnDistribuicao);
             this.panel1.Controls.Add(this.lblCategoria);
-            this.panel1.Controls.Add(this.btnDashBoard);
             this.panel1.Controls.Add(this.lblStatus);
-            this.panel1.Controls.Add(this.btnControleDeEstoque);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnReceberAlimento);
-            this.panel1.Controls.Add(this.lblNavegacao);
-            this.panel1.Location = new System.Drawing.Point(2, 36);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 724);
+            this.panel1.Size = new System.Drawing.Size(251, 759);
             this.panel1.TabIndex = 0;
             // 
             // btnLimparFiltros
@@ -109,7 +93,7 @@
             this.btnLimparFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLimparFiltros.FlatAppearance.BorderSize = 0;
             this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 594);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 289);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Size = new System.Drawing.Size(95, 28);
             this.btnLimparFiltros.TabIndex = 15;
@@ -120,17 +104,16 @@
             // dtpDataValidade
             // 
             this.dtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataValidade.Location = new System.Drawing.Point(18, 541);
+            this.dtpDataValidade.Location = new System.Drawing.Point(18, 236);
             this.dtpDataValidade.Name = "dtpDataValidade";
             this.dtpDataValidade.Size = new System.Drawing.Size(208, 20);
             this.dtpDataValidade.TabIndex = 14;
-        
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 347);
+            this.label4.Location = new System.Drawing.Point(10, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 20);
             this.label4.TabIndex = 13;
@@ -143,7 +126,7 @@
             this.btnAplicarFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAplicarFiltros.FlatAppearance.BorderSize = 0;
             this.btnAplicarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(18, 594);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(18, 289);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
             this.btnAplicarFiltros.Size = new System.Drawing.Size(95, 28);
             this.btnAplicarFiltros.TabIndex = 11;
@@ -154,7 +137,7 @@
             // lblValidadeAte
             // 
             this.lblValidadeAte.AutoSize = true;
-            this.lblValidadeAte.Location = new System.Drawing.Point(15, 515);
+            this.lblValidadeAte.Location = new System.Drawing.Point(15, 210);
             this.lblValidadeAte.Name = "lblValidadeAte";
             this.lblValidadeAte.Size = new System.Drawing.Size(69, 13);
             this.lblValidadeAte.TabIndex = 7;
@@ -168,18 +151,17 @@
             "Selecione...",
             "Valido",
             "Vencido"});
-            this.cbxStatus.Location = new System.Drawing.Point(18, 404);
+            this.cbxStatus.Location = new System.Drawing.Point(18, 99);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(208, 21);
             this.cbxStatus.TabIndex = 9;
-       
             // 
             // lblFiltros
             // 
             this.lblFiltros.AutoSize = true;
             this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltros.ForeColor = System.Drawing.Color.Navy;
-            this.lblFiltros.Location = new System.Drawing.Point(10, 327);
+            this.lblFiltros.Location = new System.Drawing.Point(10, 22);
             this.lblFiltros.Name = "lblFiltros";
             this.lblFiltros.Size = new System.Drawing.Size(52, 20);
             this.lblFiltros.TabIndex = 10;
@@ -197,154 +179,28 @@
             "Mililitros (ml)",
             "Unidades",
             "Caixas"});
-            this.cbxCategoria.Location = new System.Drawing.Point(18, 476);
+            this.cbxCategoria.Location = new System.Drawing.Point(18, 171);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(208, 21);
             this.cbxCategoria.TabIndex = 2;
-
-            // 
-            // btnDistribuicao
-            // 
-            this.btnDistribuicao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnDistribuicao.FlatAppearance.BorderSize = 0;
-            this.btnDistribuicao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistribuicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDistribuicao.Location = new System.Drawing.Point(14, 226);
-            this.btnDistribuicao.Name = "btnDistribuicao";
-            this.btnDistribuicao.Size = new System.Drawing.Size(239, 36);
-            this.btnDistribuicao.TabIndex = 8;
-            this.btnDistribuicao.Text = "Distribuição";
-            this.btnDistribuicao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistribuicao.UseVisualStyleBackColor = false;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(15, 447);
+            this.lblCategoria.Location = new System.Drawing.Point(15, 142);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(55, 13);
             this.lblCategoria.TabIndex = 5;
             this.lblCategoria.Text = "Categoria:";
             // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.Location = new System.Drawing.Point(14, 97);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Size = new System.Drawing.Size(239, 36);
-            this.btnDashBoard.TabIndex = 5;
-            this.btnDashBoard.Text = "DashBoard";
-            this.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.UseVisualStyleBackColor = false;
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(15, 378);
+            this.lblStatus.Location = new System.Drawing.Point(15, 73);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(40, 13);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status:";
-            // 
-            // btnControleDeEstoque
-            // 
-            this.btnControleDeEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnControleDeEstoque.FlatAppearance.BorderSize = 0;
-            this.btnControleDeEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControleDeEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControleDeEstoque.Location = new System.Drawing.Point(14, 184);
-            this.btnControleDeEstoque.Name = "btnControleDeEstoque";
-            this.btnControleDeEstoque.Size = new System.Drawing.Size(239, 36);
-            this.btnControleDeEstoque.TabIndex = 7;
-            this.btnControleDeEstoque.Text = "Controle de Estoque";
-            this.btnControleDeEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleDeEstoque.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "________________________";
-            // 
-            // btnReceberAlimento
-            // 
-            this.btnReceberAlimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnReceberAlimento.FlatAppearance.BorderSize = 0;
-            this.btnReceberAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceberAlimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceberAlimento.Location = new System.Drawing.Point(14, 141);
-            this.btnReceberAlimento.Name = "btnReceberAlimento";
-            this.btnReceberAlimento.Size = new System.Drawing.Size(239, 36);
-            this.btnReceberAlimento.TabIndex = 6;
-            this.btnReceberAlimento.Text = "Receber Alimentos";
-            this.btnReceberAlimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReceberAlimento.UseVisualStyleBackColor = false;
-            // 
-            // lblNavegacao
-            // 
-            this.lblNavegacao.AutoSize = true;
-            this.lblNavegacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavegacao.ForeColor = System.Drawing.Color.Navy;
-            this.lblNavegacao.Location = new System.Drawing.Point(10, 35);
-            this.lblNavegacao.Name = "lblNavegacao";
-            this.lblNavegacao.Size = new System.Drawing.Size(89, 20);
-            this.lblNavegacao.TabIndex = 5;
-            this.lblNavegacao.Text = "Navegação";
-            // 
-            // btnNovoProduto
-            // 
-            this.btnNovoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnNovoProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNovoProduto.Location = new System.Drawing.Point(16, 7);
-            this.btnNovoProduto.Name = "btnNovoProduto";
-            this.btnNovoProduto.Size = new System.Drawing.Size(99, 23);
-            this.btnNovoProduto.TabIndex = 5;
-            this.btnNovoProduto.Text = "+ Novo produto";
-            this.btnNovoProduto.UseVisualStyleBackColor = false;
-            // 
-            // btnEntradaEstoque
-            // 
-            this.btnEntradaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnEntradaEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntradaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEntradaEstoque.Location = new System.Drawing.Point(121, 7);
-            this.btnEntradaEstoque.Name = "btnEntradaEstoque";
-            this.btnEntradaEstoque.Size = new System.Drawing.Size(99, 23);
-            this.btnEntradaEstoque.TabIndex = 6;
-            this.btnEntradaEstoque.Text = "Entrada Estoque";
-            this.btnEntradaEstoque.UseVisualStyleBackColor = false;
-            // 
-            // btnSaidaEstoque
-            // 
-            this.btnSaidaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnSaidaEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaidaEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaidaEstoque.Location = new System.Drawing.Point(229, 7);
-            this.btnSaidaEstoque.Name = "btnSaidaEstoque";
-            this.btnSaidaEstoque.Size = new System.Drawing.Size(99, 23);
-            this.btnSaidaEstoque.TabIndex = 7;
-            this.btnSaidaEstoque.Text = "Saída Estoque";
-            this.btnSaidaEstoque.UseVisualStyleBackColor = false;
-            // 
-            // btnRelatorio
-            // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRelatorio.Location = new System.Drawing.Point(338, 7);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(99, 23);
-            this.btnRelatorio.TabIndex = 8;
-            this.btnRelatorio.Text = "Relatório";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -357,9 +213,9 @@
             this.panel2.Controls.Add(this.lblSubTitulo);
             this.panel2.Controls.Add(this.lblTituloEstoque);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(251, 36);
+            this.panel2.Location = new System.Drawing.Point(251, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1135, 724);
+            this.panel2.Size = new System.Drawing.Size(1135, 759);
             this.panel2.TabIndex = 1;
             // 
             // lblQRCODE
@@ -441,7 +297,7 @@
             this.dgvEstoque.Location = new System.Drawing.Point(36, 327);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1099, 357);
+            this.dgvEstoque.Size = new System.Drawing.Size(1075, 410);
             this.dgvEstoque.TabIndex = 5;
             this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             // 
@@ -564,12 +420,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(1391, 761);
-            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnSaidaEstoque);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnNovoProduto);
-            this.Controls.Add(this.btnEntradaEstoque);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -593,16 +445,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblNavegacao;
-        private System.Windows.Forms.Button btnRelatorio;
-        private System.Windows.Forms.Button btnSaidaEstoque;
-        private System.Windows.Forms.Button btnEntradaEstoque;
-        private System.Windows.Forms.Button btnNovoProduto;
-        private System.Windows.Forms.Button btnDashBoard;
-        private System.Windows.Forms.Button btnDistribuicao;
-        private System.Windows.Forms.Button btnControleDeEstoque;
-        private System.Windows.Forms.Button btnReceberAlimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvEstoque;
