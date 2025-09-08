@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
@@ -70,7 +71,6 @@
             this.btnLerQRCode = new System.Windows.Forms.Button();
             this.btnDarBaixa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -102,6 +102,21 @@
             this.panel1.Size = new System.Drawing.Size(251, 724);
             this.panel1.TabIndex = 0;
             // 
+            // btnLimparFiltros
+            // 
+            this.btnLimparFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimparFiltros.FlatAppearance.BorderSize = 0;
+            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 594);
+            this.btnLimparFiltros.Name = "btnLimparFiltros";
+            this.btnLimparFiltros.Size = new System.Drawing.Size(95, 28);
+            this.btnLimparFiltros.TabIndex = 15;
+            this.btnLimparFiltros.Text = "Limpar Filtros";
+            this.btnLimparFiltros.UseVisualStyleBackColor = false;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            // 
             // dtpDataValidade
             // 
             this.dtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -109,6 +124,7 @@
             this.dtpDataValidade.Name = "dtpDataValidade";
             this.dtpDataValidade.Size = new System.Drawing.Size(208, 20);
             this.dtpDataValidade.TabIndex = 14;
+        
             // 
             // label4
             // 
@@ -156,6 +172,7 @@
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(208, 21);
             this.cbxStatus.TabIndex = 9;
+       
             // 
             // lblFiltros
             // 
@@ -184,6 +201,7 @@
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(208, 21);
             this.cbxCategoria.TabIndex = 2;
+
             // 
             // btnDistribuicao
             // 
@@ -539,21 +557,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(755, 26);
             this.textBox1.TabIndex = 11;
-            // 
-            // btnLimparFiltros
-            // 
-            this.btnLimparFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLimparFiltros.FlatAppearance.BorderSize = 0;
-            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 594);
-            this.btnLimparFiltros.Name = "btnLimparFiltros";
-            this.btnLimparFiltros.Size = new System.Drawing.Size(95, 28);
-            this.btnLimparFiltros.TabIndex = 15;
-            this.btnLimparFiltros.Text = "Limpar Filtros";
-            this.btnLimparFiltros.UseVisualStyleBackColor = false;
-            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // frmEstoque
             // 

@@ -66,7 +66,7 @@ namespace Projeto_Socorrista
                         WHERE (@busca = '' OR codProd = @busca OR nome LIKE @buscaPattern)
                         AND (@unidade = '' OR unidade = @unidade)
                         AND (@status = '' OR status_validade = @status)
-                        AND (@validade IS NULL OR dataDEValidade = @validade)
+                        AND (@validade IS NULL OR DATE(dataDEValidade) = @validade)
                         ORDER BY codProd;";
 
             comm.CommandType = CommandType.Text;
@@ -78,6 +78,8 @@ namespace Projeto_Socorrista
             comm.Parameters.Add("@validade", MySqlDbType.Date).Value = validade.HasValue ? validade.Value.Date : (object)DBNull.Value;
             comm.Parameters.Add("@unidade", MySqlDbType.VarChar, 50).Value = unidade == "Selecione..." ? "" : unidade;
             comm.Parameters.Add("@status", MySqlDbType.VarChar, 50).Value = status == "Selecione..." ? "" : status;
+
+
 
             comm.Connection = ConectaBanco.ObterConexao(); 
 
@@ -115,20 +117,26 @@ namespace Projeto_Socorrista
 
 
         private void frmEstoque_Load(object sender, EventArgs e)
-        {
+        { 
             btnSaidaEstoque.BringToFront();
             btnEntradaEstoque.BringToFront();
             btnNovoProduto.BringToFront();
             btnRelatorio.BringToFront();
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             configDataGridView();
-            carregaDados();
-            AtualizarStatusValidade();
-            cbxCategoria.SelectedIndex = 0;
-            cbxStatus.SelectedIndex = 0;
-            dtpDataValidade.Value = DateTime.Today;
+            AtualizarStatusValidade(); 
 
+           
+            cbxCategoria.SelectedIndex = 0;
+            cbxStatus.SelectedIndex = 0;  
+            dtpDataValidade.Value = DateTime.Today;
+            dtpDataValidade.Checked = false; 
+
+      
+            AplicarFiltros();
         }
+
+
         string unidades;
         string unidadeEscolhida;
         string status_validade;
@@ -178,18 +186,19 @@ namespace Projeto_Socorrista
             carregaDados(txtNomeOrCod.Text, dataValidade, unidadeEscolhida, status_validade);
         }
 
-        private void txtNomeOrCod_TextChanged(object sender, EventArgs e)
+        private void AplicarFiltros()
         {
             string busca = txtNomeOrCod.Text;
-            DateTime? validade = null;
 
+            DateTime? validade = null;
             if (dtpDataValidade.Checked)
             {
                 validade = dtpDataValidade.Value.Date;
             }
 
-            unidades = cbxCategoria.Text;
-            status_validade = cbxStatus.Text;
+            string unidades = cbxCategoria.Text;
+            string status_validade = cbxStatus.Text;
+            string unidadeEscolhida = "";
 
             switch (unidades)
             {
@@ -202,7 +211,6 @@ namespace Projeto_Socorrista
                 case "Litros (l)":
                     unidadeEscolhida = "litros";
                     break;
-
                 case "Mililitros (ml)":
                     unidadeEscolhida = "ml";
                     break;
@@ -216,10 +224,7 @@ namespace Projeto_Socorrista
                     unidadeEscolhida = "";
                     break;
             }
-
-        
             carregaDados(busca, validade, unidadeEscolhida, status_validade);
-        
         }
 
         private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -253,5 +258,11 @@ namespace Projeto_Socorrista
             cbxStatus.SelectedIndex = 0;
             dtpDataValidade.Value = DateTime.Today;
         }
+
+        private void txtNomeOrCod_TextChanged(object sender, EventArgs e)
+        {
+            AplicarFiltros();
+        }
+
     }
 }
