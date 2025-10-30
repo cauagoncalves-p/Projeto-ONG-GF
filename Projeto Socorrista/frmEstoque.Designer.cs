@@ -44,23 +44,26 @@
             this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtNomeOrCod = new System.Windows.Forms.TextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.lblCodOrNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEstoque = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataArrecadacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTituloEstoque = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLerQRCode = new System.Windows.Forms.Button();
             this.btnDarBaixa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -137,9 +140,10 @@
             // lblValidadeAte
             // 
             this.lblValidadeAte.AutoSize = true;
+            this.lblValidadeAte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValidadeAte.Location = new System.Drawing.Point(15, 210);
             this.lblValidadeAte.Name = "lblValidadeAte";
-            this.lblValidadeAte.Size = new System.Drawing.Size(69, 13);
+            this.lblValidadeAte.Size = new System.Drawing.Size(102, 20);
             this.lblValidadeAte.TabIndex = 7;
             this.lblValidadeAte.Text = "Validade até:";
             // 
@@ -159,11 +163,11 @@
             // lblFiltros
             // 
             this.lblFiltros.AutoSize = true;
-            this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltros.ForeColor = System.Drawing.Color.Navy;
             this.lblFiltros.Location = new System.Drawing.Point(10, 22);
             this.lblFiltros.Name = "lblFiltros";
-            this.lblFiltros.Size = new System.Drawing.Size(52, 20);
+            this.lblFiltros.Size = new System.Drawing.Size(60, 24);
             this.lblFiltros.TabIndex = 10;
             this.lblFiltros.Text = "Filtros";
             // 
@@ -187,18 +191,20 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(15, 142);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(55, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(82, 20);
             this.lblCategoria.TabIndex = 5;
             this.lblCategoria.Text = "Categoria:";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(15, 73);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(40, 13);
+            this.lblStatus.Size = new System.Drawing.Size(60, 20);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status:";
             // 
@@ -215,15 +221,16 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(251, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1135, 759);
+            this.panel2.Size = new System.Drawing.Size(1213, 759);
             this.panel2.TabIndex = 1;
             // 
             // lblQRCODE
             // 
             this.lblQRCODE.AutoSize = true;
-            this.lblQRCODE.Location = new System.Drawing.Point(30, 226);
+            this.lblQRCODE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQRCODE.Location = new System.Drawing.Point(30, 223);
             this.lblQRCODE.Name = "lblQRCODE";
-            this.lblQRCODE.Size = new System.Drawing.Size(130, 13);
+            this.lblQRCODE.Size = new System.Drawing.Size(193, 20);
             this.lblQRCODE.TabIndex = 14;
             this.lblQRCODE.Text = "Leitor de código de barras";
             // 
@@ -231,7 +238,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel4.Controls.Add(this.txtNomeOrCod);
-            this.panel4.Controls.Add(this.btnLimpar);
+            this.panel4.Controls.Add(this.btnPesquisar);
             this.panel4.Location = new System.Drawing.Point(33, 141);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1078, 57);
@@ -245,29 +252,30 @@
             this.txtNomeOrCod.Name = "txtNomeOrCod";
             this.txtNomeOrCod.Size = new System.Drawing.Size(893, 26);
             this.txtNomeOrCod.TabIndex = 13;
-            this.txtNomeOrCod.TextChanged += new System.EventHandler(this.txtNomeOrCod_TextChanged);
             // 
-            // btnLimpar
+            // btnPesquisar
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.Navy;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLimpar.FlatAppearance.BorderSize = 0;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLimpar.Location = new System.Drawing.Point(962, 17);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(84, 26);
-            this.btnLimpar.TabIndex = 11;
-            this.btnLimpar.Text = "Dar baixa";
-            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.BackColor = System.Drawing.Color.Navy;
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPesquisar.Location = new System.Drawing.Point(962, 17);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(84, 26);
+            this.btnPesquisar.TabIndex = 11;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblCodOrNome
             // 
             this.lblCodOrNome.AutoSize = true;
-            this.lblCodOrNome.Location = new System.Drawing.Point(30, 120);
+            this.lblCodOrNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodOrNome.Location = new System.Drawing.Point(32, 112);
             this.lblCodOrNome.Name = "lblCodOrNome";
-            this.lblCodOrNome.Size = new System.Drawing.Size(89, 13);
+            this.lblCodOrNome.Size = new System.Drawing.Size(131, 20);
             this.lblCodOrNome.TabIndex = 2;
             this.lblCodOrNome.Text = "Código ou Nome:";
             // 
@@ -291,57 +299,18 @@
             this.produto,
             this.quantidade,
             this.unidade,
-            this.dataArrecadacao,
+            this.peso,
+            this.dataDeEntrada,
             this.validade,
-            this.status});
+            this.status,
+            this.dataLimiteSaida,
+            this.codBar});
             this.dgvEstoque.Location = new System.Drawing.Point(36, 327);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1075, 410);
+            this.dgvEstoque.Size = new System.Drawing.Size(1165, 410);
             this.dgvEstoque.TabIndex = 5;
             this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // produto
-            // 
-            this.produto.HeaderText = "Produto";
-            this.produto.Name = "produto";
-            this.produto.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
-            // unidade
-            // 
-            this.unidade.HeaderText = "Unidade";
-            this.unidade.Name = "unidade";
-            this.unidade.ReadOnly = true;
-            // 
-            // dataArrecadacao
-            // 
-            this.dataArrecadacao.HeaderText = "Arrecadação";
-            this.dataArrecadacao.Name = "dataArrecadacao";
-            this.dataArrecadacao.ReadOnly = true;
-            // 
-            // validade
-            // 
-            this.validade.HeaderText = "Validade";
-            this.validade.Name = "validade";
-            this.validade.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // lblSubTitulo
             // 
@@ -414,12 +383,72 @@
             this.textBox1.Size = new System.Drawing.Size(755, 26);
             this.textBox1.TabIndex = 11;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // produto
+            // 
+            this.produto.HeaderText = "Produto";
+            this.produto.Name = "produto";
+            this.produto.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            // 
+            // unidade
+            // 
+            this.unidade.HeaderText = "Unidade";
+            this.unidade.Name = "unidade";
+            this.unidade.ReadOnly = true;
+            // 
+            // peso
+            // 
+            this.peso.HeaderText = "Peso";
+            this.peso.Name = "peso";
+            this.peso.ReadOnly = true;
+            // 
+            // dataDeEntrada
+            // 
+            this.dataDeEntrada.HeaderText = "Entrada";
+            this.dataDeEntrada.Name = "dataDeEntrada";
+            this.dataDeEntrada.ReadOnly = true;
+            // 
+            // validade
+            // 
+            this.validade.HeaderText = "Validade";
+            this.validade.Name = "validade";
+            this.validade.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // dataLimiteSaida
+            // 
+            this.dataLimiteSaida.HeaderText = "Limite de Saída ";
+            this.dataLimiteSaida.Name = "dataLimiteSaida";
+            this.dataLimiteSaida.ReadOnly = true;
+            // 
+            // codBar
+            // 
+            this.codBar.HeaderText = "Código de barras";
+            this.codBar.Name = "codBar";
+            this.codBar.ReadOnly = true;
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(1391, 761);
+            this.ClientSize = new System.Drawing.Size(1464, 761);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -465,16 +494,19 @@
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtNomeOrCod;
-        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label lblQRCODE;
+        private System.Windows.Forms.DateTimePicker dtpDataValidade;
+        private System.Windows.Forms.Button btnLimparFiltros;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataArrecadacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn validade;
-        private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Button btnLimparFiltros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codBar;
     }
 }
