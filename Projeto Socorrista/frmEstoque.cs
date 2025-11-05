@@ -86,11 +86,8 @@ namespace Projeto_Socorrista
                     DR["quantidade"].ToString(),
                     DR["unidade"].ToString(),
                     DR["peso"].ToString(),
-                    dataDeEntrada,
-                    dataValidade,
                     DR["status_validade"].ToString(),
-                    dataLimiteSaida,
-                    DR["codBar"].ToString()   
+                    dataLimiteSaida
                 );
             }
 
@@ -159,7 +156,7 @@ namespace Projeto_Socorrista
 
         private void AplicarFiltros()
         {
-            string busca = txtNomeOrCod.Text;
+            string busca = txtNomeOrCod.Text.Replace(" ", "");
 
             DateTime? validade = null;
             if (dtpDataValidade.Checked)
@@ -247,6 +244,18 @@ namespace Projeto_Socorrista
             comm.Connection = ConectaBanco.ObterConexao();
             comm.ExecuteNonQuery();
             ConectaBanco.FecharConexao();
+        }
+
+        private void btnCarregaTodosProdutos_Click(object sender, EventArgs e)
+        {
+            if (!txtNomeOrCod.Text.Equals(""))
+            {
+                txtNomeOrCod.Clear();
+                AplicarFiltros();
+            }
+            else { 
+                AplicarFiltros();
+            }
         }
     }
 }

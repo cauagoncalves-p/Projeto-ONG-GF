@@ -43,6 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCarregaTodosProdutos = new System.Windows.Forms.Button();
             this.txtNomeOrCod = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.lblCodOrNome = new System.Windows.Forms.Label();
@@ -59,11 +60,8 @@
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDeEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -237,12 +235,29 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel4.Controls.Add(this.btnCarregaTodosProdutos);
             this.panel4.Controls.Add(this.txtNomeOrCod);
             this.panel4.Controls.Add(this.btnPesquisar);
             this.panel4.Location = new System.Drawing.Point(33, 141);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1078, 57);
+            this.panel4.Size = new System.Drawing.Size(1168, 57);
             this.panel4.TabIndex = 13;
+            // 
+            // btnCarregaTodosProdutos
+            // 
+            this.btnCarregaTodosProdutos.BackColor = System.Drawing.Color.Navy;
+            this.btnCarregaTodosProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarregaTodosProdutos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCarregaTodosProdutos.FlatAppearance.BorderSize = 0;
+            this.btnCarregaTodosProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarregaTodosProdutos.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCarregaTodosProdutos.Location = new System.Drawing.Point(1069, 17);
+            this.btnCarregaTodosProdutos.Name = "btnCarregaTodosProdutos";
+            this.btnCarregaTodosProdutos.Size = new System.Drawing.Size(84, 26);
+            this.btnCarregaTodosProdutos.TabIndex = 14;
+            this.btnCarregaTodosProdutos.Text = "Todos";
+            this.btnCarregaTodosProdutos.UseVisualStyleBackColor = false;
+            this.btnCarregaTodosProdutos.Click += new System.EventHandler(this.btnCarregaTodosProdutos_Click);
             // 
             // txtNomeOrCod
             // 
@@ -283,12 +298,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 83);
+            this.label1.Location = new System.Drawing.Point(27, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(882, 20);
+            this.label1.Size = new System.Drawing.Size(1179, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "_________________________________________________________________________________" +
-    "________________";
+    "_________________________________________________";
             // 
             // dgvEstoque
             // 
@@ -300,11 +315,8 @@
             this.quantidade,
             this.unidade,
             this.peso,
-            this.dataDeEntrada,
-            this.validade,
             this.status,
-            this.dataLimiteSaida,
-            this.codBar});
+            this.dataLimiteSaida});
             this.dgvEstoque.Location = new System.Drawing.Point(36, 327);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
@@ -341,7 +353,7 @@
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Location = new System.Drawing.Point(33, 252);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1078, 57);
+            this.panel3.Size = new System.Drawing.Size(1168, 57);
             this.panel3.TabIndex = 2;
             // 
             // btnLerQRCode
@@ -413,18 +425,6 @@
             this.peso.Name = "peso";
             this.peso.ReadOnly = true;
             // 
-            // dataDeEntrada
-            // 
-            this.dataDeEntrada.HeaderText = "Entrada";
-            this.dataDeEntrada.Name = "dataDeEntrada";
-            this.dataDeEntrada.ReadOnly = true;
-            // 
-            // validade
-            // 
-            this.validade.HeaderText = "Validade";
-            this.validade.Name = "validade";
-            this.validade.ReadOnly = true;
-            // 
             // status
             // 
             this.status.HeaderText = "Status";
@@ -436,12 +436,6 @@
             this.dataLimiteSaida.HeaderText = "Limite de Saída ";
             this.dataLimiteSaida.Name = "dataLimiteSaida";
             this.dataLimiteSaida.ReadOnly = true;
-            // 
-            // codBar
-            // 
-            this.codBar.HeaderText = "Código de barras";
-            this.codBar.Name = "codBar";
-            this.codBar.ReadOnly = true;
             // 
             // frmEstoque
             // 
@@ -498,15 +492,13 @@
         private System.Windows.Forms.Label lblQRCODE;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.Button btnLimparFiltros;
+        private System.Windows.Forms.Button btnCarregaTodosProdutos;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn validade;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteSaida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codBar;
     }
 }
